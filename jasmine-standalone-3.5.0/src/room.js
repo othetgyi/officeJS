@@ -7,6 +7,9 @@ class Room {
   enter(){
     this.isAvailable = false;
   }
+  leave(){
+    this.isAvailable = true;
+  }
 }
 
 
