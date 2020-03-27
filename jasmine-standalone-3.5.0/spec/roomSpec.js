@@ -12,7 +12,10 @@ describe('Room', function(){
     expect(room.isAvailable).toEqual(true);
   });
 
-  
+  it('allows a person to enter the meeting room', function(){
+    room.enter();
+    expect(room.isAvailable).toEqual(false);
+  });
 });
 
 

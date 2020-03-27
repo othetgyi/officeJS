@@ -4,6 +4,9 @@ class Room {
   constructor() {
     this.isAvailable = true;
   }
+  enter(){
+    this.isAvailable = false;
+  }
 }
 
 
