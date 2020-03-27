@@ -9,18 +9,26 @@ describe('Room', function(){
   });
 
   it('starts out by being available', function(){
-    expect(room.isAvailable).toEqual(true);
+    expect(room.IsRoomAvailable).toEqual(true);
   });
 
   it('becomes unavailable when a person enters the room', function(){
     room.enter();
-    expect(room.isAvailable).toEqual(false);
+    expect(room.IsRoomAvailable).toEqual(false);
   });
 
   it('becomes available when a person leaves the room', function(){
     room.enter();
     room.leave();
-    expect(room.isAvailable).toEqual(true);
+    expect(room.isRoomAvailable).toEqual(true);
+  });
+
+  describe('#enter', function(){
+    it('blocks someone entering the room when it is already occupied', function(){
+      expect(function(){
+        room.enter();
+      }).toThrowError('This room is already occupied');
+    });
   });
 });
 

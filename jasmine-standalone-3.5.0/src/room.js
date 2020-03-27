@@ -2,13 +2,23 @@
 
 class Room {
   constructor() {
-    this.isAvailable = true;
+    this.available = true;
   }
+
+  isRoomAvailable() {
+    return this.available;
+  }
+
   enter(){
-    this.isAvailable = false;
+    if (this.isRoomAavailable == true) {
+      this.isRoomAvailable = false;
+    } else {
+      throw new Error ('This room is already occupied');
+    }
   }
+
   leave(){
-    this.isAvailable = true;
+    this.isRoomAvailable = true;
   }
 }
 
