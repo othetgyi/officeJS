@@ -30,18 +30,13 @@ describe('Room', function(){
     }).toThrowError('This room is already occupied');
   });
 
+  it('can take a name', function(){
+    var result = room.getRoomName('Elm');
+    expect(result).toEqual('Elm');
+  });
+
 });
 
   // it('can accept a name for the room', function(){
   //   expect(room.getRoomName('Blue')).toEqual('Blue');
   // });
-
-
-
-
-  // it('blocks someone from entering the room when it is already occupied', function(){
-  //   expect(function(){
-  //   room.enter();
-  //   }).toThrowError('This room is already occupied');
-  // });
-// });

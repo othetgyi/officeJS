@@ -1,21 +1,25 @@
 'use strict';
 
 class Room {
-  constructor() {
+  constructor(name) {
     this.available = true;
   };
-  isAvailable(){
+  isAvailable(name){
     return this.available;
   };
-  enter(){
+  enter(name){
     if (this.isAvailable() === false){
       throw new Error ('This room is already occupied');
     } else {
       this.available = false;
     }
   };
-  leave(){
+  leave(name){
     this.available = true;
+  };
+
+  getRoomName(name){
+    return name;
   };
 
 };
