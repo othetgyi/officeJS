@@ -8,7 +8,11 @@ class Room {
     return this.available;
   };
   enter(){
-    this.available = false;
+    if (this.isAvailable() === false){
+      throw new Error ('This room is already occupied');
+    } else {
+      this.available = false;
+    }
   };
   leave(){
     this.available = true;
