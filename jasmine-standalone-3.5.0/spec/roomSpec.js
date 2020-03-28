@@ -11,6 +11,11 @@ describe('Room', function(){
   it('is available', function(){
     expect(room.isAvailable()).toBe(true);
   });
+
+  it('becomes unavailable when someone enters', function(){
+    room.enter();
+    expect(room.isAvailable()).toBe(false);
+  });
 });
 
 

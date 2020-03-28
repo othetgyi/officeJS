@@ -7,6 +7,10 @@ class Room {
   isAvailable(){
     return this.available;
   };
+  enter(){
+    this.available = false;
+  }
+
 };
 
 
