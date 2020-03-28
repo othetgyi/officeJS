@@ -16,6 +16,12 @@ describe('Room', function(){
     room.enter();
     expect(room.isAvailable()).toBe(false);
   });
+
+  it('becomes available again when someone leaves', function(){
+    room.enter();
+    room.leave();
+    expect(room.isAvailable()).toBe(true);
+  });
 });
 
 

@@ -9,7 +9,10 @@ class Room {
   };
   enter(){
     this.available = false;
-  }
+  };
+  leave(){
+    this.available = true;
+  };
 
 };
 
