@@ -12,14 +12,12 @@ class Room {
       throw new Error ('This room is already occupied');
     } else {
       this.available = false;
-    }
+    };
   };
   leave(name){
     this.available = true;
   };
-
   getRoomName(name){
     return name;
   };
-
 };

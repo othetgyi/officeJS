@@ -13,4 +13,11 @@ describe ('Office', function(){
     office.addRoom('Elm');
     expect(office.listAll()).toEqual(['Elm']);
   });
+
+  it('lists all the meeting rooms in the office', function(){
+    office.addRoom('Elm');
+    office.addRoom('Oak');
+    office.addRoom('Poplar');
+    expect(office.listAll()).toEqual(['Elm', 'Oak', 'Poplar']);
+  });
 });
