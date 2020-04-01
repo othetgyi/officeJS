@@ -3,6 +3,7 @@
 class Room {
   constructor(name) {
     this.available = true;
+    this.name = name;
   };
   isAvailable(name){
     return this.available;
